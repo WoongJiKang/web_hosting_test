@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환전 계산기</title>
+    <script src="source.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .medal-container {
+            position: relative;
+            width: 300px; /* 이미지의 너비를 300으로 설정 */
+            height: 70px; /* 이미지의 높이에 맞게 설정 */
+            background-image: url('GoldMedal.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-start; /* 아래쪽 정렬 */
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .medal-container input {
+            position: absolute;
+            left: 140px; /* 입력 박스 왼쪽 위치 조정 */
+            width: 120px; /* 텍스트 박스 너비 */
+            height: 10px; /* 텍스트 박스 높이 수정 */
+            padding: 5px;
+            border: none;
+            background-color: transparent; /* 투명하게 설정 */
+            color: #fff;
+            text-align: center;
+            bottom: 10px; /* 아래쪽 여백 추가 */
+        }
+
+        .meso-container {
+            display: flex;
+            align-items: flex-end;
+            background-image: url('MesoMarket_Sell.png'); /* 메소 판매량 배경 이미지 */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            width: 300px;
+            height: 70px; /* 이미지 높이에 맞게 설정 */
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .meso-container input {
+            position: absolute;
+            width: 69px;
+            left: 180px;
+            bottom: 52px;
+            padding: 5px;
+            border: none;
+            background-color: transparent; /* 투명하게 설정 */
+            color: #fff;
+            border-radius: 3px;
+            text-align: center;
+            margin-left: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>아즈모스 리워드 손익 조건 계산기</h2>
+    <h3><a href="https://www.inven.co.kr/board/maple/5974/4230103" target="_blank">출처: 인벤 귤먹는 포토</a></h3>
+    <div class="medal-container">
+        <input type="text" id="goldAmount" placeholder="골드 주화 교환가">
+    </div>
+
+    <div class="meso-container">
+        <input type="text" id="mesoAmount" placeholder="메포 판매가">
+    </div>
+    
+    <button onclick="showAmounts()">결과 보기</button>
+    <p id="result"></p>
+</body>
+</html>
