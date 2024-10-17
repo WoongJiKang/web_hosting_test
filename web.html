@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>아즈모스 리워드 손익 조건 계산기</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <script src="source.js" defer></script>
 </head>
 <body>
-    <div class="container"> <!-- 컨테이너 추가 -->
+    <div class="container">
         <h2>아즈모스 리워드 손익 조건 계산기</h2>
-        <h3><a href="https://www.inven.co.kr/board/maple/5974/4208442" target="_blank">출처: 인벤 딸기냥이</a></h3>
-        <h3><a href="https://www.inven.co.kr/board/maple/5974/4230103" target="_blank">출처: 인벤 귤먹는 포토</a></h3>
+        <h4>
+            <a href="#" onclick="window.open('https://www.inven.co.kr/board/maple/5974/4208442', '_blank', 'width=900,height=1000');">출처: 인벤 딸기냥이</a><br>
+            <a href="#" onclick="window.open('https://www.inven.co.kr/board/maple/5974/4230103', '_blank', 'width=900,height=1000');">출처: 인벤 귤먹는 포토</a>
+        </h4>
         <div class="medal-container">
             <input type="text" id="goldAmount" placeholder="골드 주화 교환가">
         </div>
 
         <div class="meso-container">
             <input type="text" id="mesoAmount" placeholder="메포 판매가">
+            <div class="count-container">
+                <input type="text" id="count" placeholder="1" readonly>
+            </div>
         </div>
-        
-        <button onclick="showAmounts()">결과 보기</button>
+
+        <div class="reward-container">
+            <label id="rewardLabel" style="color: white;">0 컨텐츠 포인트</label>
+            <label id="azrewardLabel" style="color: white;">0 아즈모스 코인</label>
+            <label id="goldLabel" style="color: white;">0 메이플 골드 주화<br></label>
+            <label id="maepoLabel" style="color: white;">0 메이플 포인트 소모<br></label>
+            <input type="range" id="countSlider" min="0" max="10000" value="0" step="500" oninput="updateCountValue(this.value); showAmounts();">
+        </div>             
+
         <p id="result"></p>
     </div>
 </body>
