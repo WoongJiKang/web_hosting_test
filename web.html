@@ -31,7 +31,10 @@
             <label id="goldLabel" style="color: white;">0 메이플 골드 주화<br></label>
             <label id="maepoLabel" style="color: white;">0 메이플 포인트 소모<br></label>
             <input type="range" id="countSlider" min="0" max="10000" value="0" step="500" oninput="updateCountValue(this.value); showAmounts();">
-        </div>             
+            <div class="slider-labels">
+                <span>0</span><span>2500</span><span>5000</span><span>7500</span><span>10000</span>
+            </div>
+        </div>
 
         <p id="result"></p>
     </div>

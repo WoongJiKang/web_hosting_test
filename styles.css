@@ -160,3 +160,28 @@ input[type="range"] {
     width: 250px; /* 슬라이더 바의 너비를 100%로 설정 */
     margin-top: 5px; /* 슬라이더와 입력 필드 간격 */
 }
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 10px;
+    color: white;
+    width: 100%;
+}
+
+.slider-labels span:nth-child(2) {
+    margin-left: 45px; /* Adjust to move '2500' to the right */
+}
+
+.slider-labels span:nth-child(3) {
+    margin-left: 30px; /* Adjust to move '5000' to the right */
+}
+
+.slider-labels span:nth-child(4) {
+    margin-left: 30px; /* Adjust to move '7500' to the right */
+}
+
+.slider-labels span:nth-child(5) {
+    margin-left: 20px; /* Adjust to move '10000' to the right */
+}
