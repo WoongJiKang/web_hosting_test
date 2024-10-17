@@ -32,7 +32,7 @@ function showAmounts() {
 
         // 결과 문자열에 비교 결과와 추가 메시지를 포함합니다.
         resultText += `비교 결과: ${comparisonResult}<br>`;
-        resultText += `골드 주화 = ${formatNumber(adjustedGoldAmount.toString())}일 때, 메소 판매 비율은 <span style='color: Red;'>${divisionResult}메포</span> 이상이어야 한다.`;
+        resultText += `<span style='color: #EDD53F;'>골드 주화 = ${formatNumber(adjustedGoldAmount.toString())}</span>일 때, 메소 판매 비율은 <span style='color: Red;'>${divisionResult}메포</span> 이상이어야 한다.`;
 
     } else {
         resultText += `계산할 수 없습니다. <span style="color: #EDD53F;">골드 주화 교환가</span> 혹은 <span style="color: #3d5a64;">메소마켓 메소 판매가</span>가 0 이거나 그 이하입니다.`;
